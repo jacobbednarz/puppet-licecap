@@ -7,7 +7,7 @@ class licecap {
   exec { 'download-licecap':
     command => 'curl -L https://s3-us-west-1.amazonaws.com/boxen-dmgs/licecap-1.23.tgz -o licecap.tgz',
     cwd     => '/tmp',
-    creates => '/tmp/macruby.zip'
+    creates => '/tmp/licecap.tgz'
   }
   exec { 'extract-licecap':
     command => 'tar xfz /tmp/licecap.tgz',
