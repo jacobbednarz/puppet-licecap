@@ -5,12 +5,12 @@
 #   include licecap
 class licecap {
   exec { 'download-licecap':
-    command => 'curl -L https://s3-us-west-1.amazonaws.com/boxen-dmgs/licecap-1.23.tgz -o licecap.zip',
+    command => 'curl -L https://s3-us-west-1.amazonaws.com/boxen-dmgs/licecap-1.23.tgz -o licecap.tgz',
     cwd     => '/tmp',
     creates => '/tmp/macruby.zip'
   }
   exec { 'extract-licecap':
-    command => '/usr/bin/unzip -o /tmp/licecap.zip',
+    command => 'tar xfz /tmp/licecap.tgz',
     cwd     => '/tmp',
     creates => '/tmp/LICEcap.app',
     require => Exec['download-licecap']
