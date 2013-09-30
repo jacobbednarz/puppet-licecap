@@ -5,7 +5,7 @@
 #   include licecap
 class licecap {
   package { 'LICEcap':
-    provider => 'pkgdmg',
-    source   => 'http://www.cockos.com/licecap/licecap123.dmg'
+    provider => 'appdmg',
+    source   => 'https://s3-us-west-1.amazonaws.com/boxen-dmgs/licecap-installer-1.23.dmg'
   }
 }
