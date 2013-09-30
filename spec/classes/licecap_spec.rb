@@ -1,10 +1,9 @@
 require 'spec_helper'
 
-describe 'licecap' do
+describe 'LICEcap' do
   it do
-    should contain_package('LICEcap').with({
-      :provider => 'appdmg',
-      :source   => 'https://s3-us-west-1.amazonaws.com/boxen-dmgs/licecap-installer-1.23.dmg'
-    })
+    should contain_exec('download')
+    should contain_exec('extract')
+    should contain_exec('install')
   end
 end
