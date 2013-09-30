@@ -15,7 +15,7 @@ class licecap {
     creates => '/tmp/LICEcap.app',
     require => Exec['download-licecap']
   }
-  exec { 'install':
+  exec { 'install-licecap':
     command => 'mv /tmp/LICEcap.app /Applications',
     creates => '/Applications/LICEcap.app',
     require => Exec['extract-licecap']
