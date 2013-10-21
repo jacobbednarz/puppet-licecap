@@ -1,9 +1,10 @@
 require 'spec_helper'
 
-describe 'LICEcap' do
+describe 'licecap' do
   it do
-    should contain_exec('download-licecap')
-    should contain_exec('extract-licecap')
-    should contain_exec('install-licecap')
+    should contain_package('licecap').with({
+      :provider => 'appdmg_eula',
+      :source   => 'http://www.cockos.com/licecap/licecap123.dmg',
+    })
   end
 end
