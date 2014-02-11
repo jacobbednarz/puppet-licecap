@@ -4,7 +4,7 @@ describe 'licecap' do
   it do
     should contain_package('licecap').with({
       :provider => 'appdmg_eula',
-      :source   => 'http://www.cockos.com/licecap/licecap123.dmg',
+      :source   => 'http://www.cockos.com/licecap/licecap124.dmg',
     })
   end
 end
