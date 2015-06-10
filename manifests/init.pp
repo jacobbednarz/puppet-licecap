@@ -6,6 +6,6 @@
 class licecap {
   package { 'licecap':
     provider => 'appdmg_eula',
-    source   => 'http://www.cockos.com/licecap/licecap124.dmg'
+    source   => 'http://www.cockos.com/licecap/licecap125.dmg'
   }
 }
